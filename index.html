@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/base.min.css">
+    <link rel="stylesheet" href="./css/index.min.css">
+    <title>StudentIDGenerator</title>
+</head>
+
+<body>
+    <section class="main">
+        <h1>学生証作成ツール</h1>
+        <p>
+            <a target="_blank" href="https://satu.booth.pm/items/5178873">学生証付き首輪</a>向けのテクスチャ作れるやつです<br>
+            liltoonの2nd,3ndカラーとかに入れて透明度調整するといい感じかもです<br>
+            顔写真はこのページにドロップか「顔写真」に設定後に<br>
+            下のプレビュー上でドラッグで移動、スクロールで拡大縮小できます<br>
+            二次元コードは空白で描画なしになります
+        </p>
+        <hr>
+        <section class="interface">
+            <section class="input-area">
+                <section class="row">
+                    <section class="col fileName">
+                        ファイル名<br>
+                        <input type="text" id="filename" value="test1.png" placeholder="ファイル名">
+                    </section>
+                    <section class="col img">
+                        顔写真
+                        <div class="input-area">
+                            <button onClick="delFile(this)" class="btn inline">削除</button> <input type="file" id="inputFaceImg"
+                                class="inline">
+                        </div>
+                    </section>
+                    <section class="col type">
+                        種別
+                        <select id="idType">
+                            <option value="normal">表</option>
+                            <option value="abnormal">裏</option>
+                        </select>
+                    </section>
+                </section>
+                <section class="row">
+                    <section class="col img">
+                        番号<br>
+                        <input type="text" id="S_N_No" value="" placeholder="番号">
+                    </section>
+                    <section class="col img">
+                        学科/専攻<br>
+                        <input type="text" id="course" value="" placeholder="学科/専攻">
+                    </section>
+                </section>
+                <section class="row">
+                    <section class="col img">
+                        氏名(ふりがな)<br>
+                        <input type="text" id="namefuri" value="" placeholder="氏名(ふりがな)">
+                    </section>
+                    
+                    <section class="col img">
+                        氏名<br>
+                        <input type="text" id="name" value="" placeholder="氏名">
+                    </section>
+                </section>
+                
+                <section class="row">
+                    <section class="col img">
+                        生年月日<br>
+                        <input type="text" id="birthday" value="" placeholder="生年月日">
+                    </section>
+                    
+                    <section class="col img">
+                        有効期限<br>
+                        <input type="text" id="expire" value="" placeholder="有効期限">
+                    </section>
+                </section>
+                <section class="row">
+                    <section class="col full">
+                        二次元コード<br>
+                        <input type="text" id="code" value="" placeholder="二次元コード">
+                    </section>
+                </section>
+            </section>
+        </section>
+        <button id="gen" onClick="faceImgLoad()" class="btn">位置リセット</button>
+        <button id="download" onClick="download()" class="btn">ダウンロード</button>
+        <section class="output">
+            <section class="output-group">
+                <canvas id="view"></canvas>
+            </section>
+        </section>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

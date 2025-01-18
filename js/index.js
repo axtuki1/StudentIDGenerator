@@ -2,10 +2,10 @@
 let isAssetsAvailable = false;
 
 const assetsURL = {
-    "studentID_normal_UpLayer": "./assets/studentID_normal_UpLayer.png",
-    "studentID_normal_DownLayer": "./assets/studentID_normal_DownLayer.png",
-    "studentID_abnormal_UpLayer": "./assets/studentID_abnormal_UpLayer.png",
-    "studentID_abnormal_DownLayer": "./assets/studentID_abnormal_DownLayer.png",
+    "studentID_normal_UpLayer": "./assets/studentID_Normal_UpLayer.png",
+    "studentID_normal_DownLayer": "./assets/studentID_Normal_DownLayer.png",
+    "studentID_abnormal_UpLayer": "./assets/studentID_Abnormal_UpLayer.png",
+    "studentID_abnormal_DownLayer": "./assets/studentID_Abnormal_DownLayer.png",
     "studentID_mask": "./assets/studentID_Mask.png",
 }
 
